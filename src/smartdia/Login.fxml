@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.Login">
+    
+    <children>
+      <Button id="btnIniciar" fx:id="btnIniciar" layoutX="355.0" layoutY="248.0" onAction="#handleButtonAction" text="Iniciar Sesion" >
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+      </Button>
+      <Label fx:id="lblResultado" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="lblUsuario" layoutX="54.0" layoutY="87.0" text="Usuario" />
+      <Label fx:id="lblContraseña" layoutX="54.0" layoutY="142.0" text="Contraseña" />
+      <TextField fx:id="txtUsuario" layoutX="139.0" layoutY="83.0" />
+      <PasswordField fx:id="txtContraseña" layoutX="139.0" layoutY="138.0" />
+    </children>
+</AnchorPane>

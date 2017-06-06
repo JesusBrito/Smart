@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.AgregarEvento_GUI">
+   <children>
+      <ComboBox fx:id="cmbContactos" layoutX="43.0" layoutY="53.0" prefHeight="25.0" prefWidth="343.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="btnActualizarBD" layoutX="14.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnActualizarBD_clicked" prefHeight="25.0" prefWidth="30.0" text="↻">
+         <font>
+            <Font name="Consolas Bold Italic" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnAgregarContacto" layoutX="237.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnAgregarContacto_clicked" prefHeight="25.0" prefWidth="149.0" text="Nuevo Contacto" />
+      <DatePicker fx:id="dpFechaIni" editable="false" layoutX="14.0" layoutY="159.0" prefHeight="25.0" prefWidth="205.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="181.0" />
+      <Button fx:id="btnHIHmax" layoutX="234.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIHmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHIHmin" layoutX="264.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIHmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHIMmax" layoutX="310.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIMmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHIMmin" layoutX="340.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIMmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="dpFechaFin" editable="false" layoutX="19.0" layoutY="273.0" prefHeight="25.0" prefWidth="205.0" />
+      <Button fx:id="btnHTHmax" layoutX="235.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTHmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHTHmin" layoutX="265.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTHmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHTMmax" layoutX="311.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTMmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnHTMmin" layoutX="341.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTMmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="txtInformacion" layoutX="14.0" layoutY="370.0" prefHeight="142.0" prefWidth="372.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Label layoutX="19.0" layoutY="130.0" text="Fecha y Hora de inicio:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="343.0" text="Evento:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAgregarEvent" layoutX="218.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnAgregarEvento_clicked" prefHeight="25.0" prefWidth="168.0" text="Añadir Evento" />
+      <Button fx:id="btnCancelar" cancelButton="true" layoutX="15.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnCancelar_clicked" prefHeight="25.0" prefWidth="168.0" text="Cancelar" />
+      <Label fx:id="txtHoraI" layoutX="251.0" layoutY="155.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="298.0" layoutY="150.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtMinutoI" layoutX="327.0" layoutY="155.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtMinutoT" layoutX="328.0" layoutY="269.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="264.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtHoraT" layoutX="252.0" layoutY="269.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="244.0" text="Fecha y Hora de Termino:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
