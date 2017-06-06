@@ -16,8 +16,8 @@
       </Button>
       <Label fx:id="lblResultado" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Label fx:id="lblUsuario" layoutX="54.0" layoutY="87.0" text="Usuario" />
-      <Label fx:id="lblContraseña" layoutX="54.0" layoutY="142.0" text="Contraseña" />
+      <Label fx:id="lblContrasenia" layoutX="54.0" layoutY="142.0" text="Contraseña" />
       <TextField fx:id="txtUsuario" layoutX="139.0" layoutY="83.0" />
-      <PasswordField fx:id="txtContraseña" layoutX="139.0" layoutY="138.0" />
+      <PasswordField fx:id="txtContrasenia" layoutX="139.0" layoutY="138.0" />
     </children>
 </AnchorPane>
