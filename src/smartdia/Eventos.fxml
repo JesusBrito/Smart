@@ -99,11 +99,23 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <JFXButton layoutX="19.0" layoutY="2.0" prefHeight="25.0" prefWidth="388.0" />
-            <Button layoutX="19.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Buscar" />
-            <Button layoutX="226.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Eliminar" />
-            <Button layoutX="351.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Añadir" />
-            <Button layoutX="478.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Exportar como..." />
+            <JFXButton layoutX="19.0" layoutY="2.0" onAction="#btnActualizar_clicked" prefHeight="25.0" prefWidth="388.0" text="Actualizar" />
+            <Button layoutX="19.0" layoutY="574.0" mnemonicParsing="false" onAction="#btnBuscar_clicked" prefHeight="25.0" prefWidth="94.0" text="Buscar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="226.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Eliminar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="351.0" layoutY="574.0" mnemonicParsing="false" onAction="#btnAniadir_clicked" prefHeight="25.0" prefWidth="117.0" text="Añadir">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="478.0" layoutY="574.0" mnemonicParsing="false" onAction="#btnExportarComo_clicked" prefHeight="25.0" prefWidth="117.0" text="Exportar como...">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="apContactos" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
