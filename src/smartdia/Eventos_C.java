@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package smartdia;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
@@ -270,7 +264,6 @@ public class Eventos_C implements Initializable {
                     foto = db.SeleccionarImagenCliente("SELECT * FROM clientes WHERE idclientes = " + cliente.get(i)[0]  + ";")//foto
             ));
         }
-        
         db.cierraCnx();
         actualizarTablaClientes();
     }
