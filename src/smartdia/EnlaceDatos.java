@@ -50,6 +50,7 @@ public final class EnlaceDatos {
             ErrorMessage("MySQL Error", "Ha ocurrido un error en la Base de Datos", "No se pudo conectar a la Base de Datos.");
         }
     }
+    
     public BufferedImage SeleccionarImagenCliente(String query) throws IOException{
         BufferedImage bifoto=null;
         try{
@@ -196,6 +197,10 @@ public final class EnlaceDatos {
         alert.setContentText(Contenido);
 
         alert.showAndWait();
+    }
+    
+    public Connection getCnx() {
+        return cnx;
     }
     
 }
