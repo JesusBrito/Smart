@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package smartdia;
-
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,19 +34,17 @@ import org.controlsfx.control.Notifications;
 public class AgregarContacto_C implements Initializable {
     
     @FXML public Button btnCancelar;
-    @FXML public TextField txtNombre;
-    @FXML public TextField txtApellidos;
-    @FXML public ComboBox cmbTratamiento;
-    @FXML public TextField txtEmpresa;
-    @FXML public TextField txtCorreo;
-    @FXML public TextField txtTelefono;
-    @FXML public PasswordField pfContrasenia;
-    @FXML public PasswordField pfRepetir;
-    @FXML public TextField txtPais;
-    @FXML public TextField txtCiudad;
-    @FXML public TextField txtCalle;
-    @FXML public TextField txtColonia;
-    @FXML public TextField txtNumero;
+    @FXML public JFXTextField txtNombre;
+    @FXML public JFXTextField txtApellidos;
+    @FXML public JFXComboBox cmbTratamiento;
+    @FXML public JFXTextField txtEmpresa;
+    @FXML public JFXTextField txtCorreo;
+    @FXML public JFXTextField txtTelefono;
+    @FXML public JFXTextField txtPais;
+    @FXML public JFXTextField txtCiudad;
+    @FXML public JFXTextField txtCalle;
+    @FXML public JFXTextField txtColonia;
+    @FXML public JFXTextField txtNumero;
     @FXML public ImageView ivFoto;
     File selectedFile;
     
@@ -85,8 +84,6 @@ public class AgregarContacto_C implements Initializable {
                 txtEmpresa.getText().equals("") ||
                 txtCorreo.getText().equals("") ||
                 txtTelefono.getText().equals("") ||
-                pfContrasenia.getText().equals("") || 
-                pfRepetir.getText().equals("") ||
                 txtPais.getText().equals("") ||
                 txtCiudad.getText().equals("") ||
                 txtCalle.getText().equals("") ||
@@ -95,16 +92,9 @@ public class AgregarContacto_C implements Initializable {
         {
             //Si los datos no están completos.
             ErrorMessage("Error", "Alguno de los campos está vacio", "Favor de llenar todos los datos");
-        } else {
-            //Si los datos están llenos.
-            if (pfContrasenia.getText().equals(pfRepetir.getText())){
-                //Verifica que la contraseña se confirmo al repetir.
-                addBasedeDatos();
-                cerrar();
-            } else {
-                //Las contraseñas son diferentes.
-                ErrorMessage("Error", "Las contraseñas son diferentes.", "Favor de repetir correctamente la contraseña");
-            }
+        }else{
+            addBasedeDatos();
+            cerrar();
         }
     }
     
@@ -141,7 +131,6 @@ public class AgregarContacto_C implements Initializable {
             txtCiudad.getText(),
             txtCalle.getText(),
             txtColonia.getText(),
-            pfContrasenia.getText()
         };
         int n = Integer.parseInt(txtNumero.getText());
         if (bd.InsertarClientes(datos, selectedFile.getAbsolutePath(), n) == true){ 
