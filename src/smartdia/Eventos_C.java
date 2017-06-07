@@ -127,12 +127,12 @@ public class Eventos_C implements Initializable {
     
     @FXML
     private void btnVisualizar_clicked(ActionEvent event){
-        
+       //Clientes tmp =  tvClientes.getSelectionModel().getSelectedItems();
+       //lbNombre.setText(tmp.getNombre());
     }
     
     @FXML
     private void btnExportarComo_clicked(ActionEvent event){
-        
     }
     
     @FXML

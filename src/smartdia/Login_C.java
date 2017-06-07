@@ -1,4 +1,7 @@
 package smartdia;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,12 +44,17 @@ public class Login_C implements Initializable {
     int contadorInicio=0;
     @FXML
     private AnchorPane AnchorPane;
+    
     @FXML
-    private TextField txtUsuario, txtContrasenia;
+    private JFXTextField txtUsuario;
+    
     @FXML
-    private Label lblResultado;
+    private JFXPasswordField txtContrasenia;
+
+    
     @FXML
-    private Button btnIniciar;
+    private JFXButton btnIniciar;
+    
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Usuario=txtUsuario.getText();
