@@ -20,6 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,11 +29,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -66,12 +69,13 @@ public class Eventos_C implements Initializable {
     @FXML private TableColumn<Clientes, String> tcPais;
     @FXML private TableColumn<Clientes, String> tcDireccion;
     @FXML private DatePicker dpFechaContacto;
-    
+    @FXML private Label lbNombre,lbEmpresa,lbCorreo,lbTelefono,lbDireccion;
+    @FXML private ImageView imgCliente;
     ObservableList<Cita> data = FXCollections.observableArrayList();
     ObservableList<Clientes> dataClientes = FXCollections.observableArrayList();
     ArrayList<String[]> eventos = new ArrayList<>();
     ArrayList<String[]> cliente = new ArrayList<>();
-        
+    
     @FXML
     private void btnAgenda_clicked(ActionEvent event) throws SQLException, ParseException{
         apEventos.setDisable(false);
@@ -127,8 +131,17 @@ public class Eventos_C implements Initializable {
     
     @FXML
     private void btnVisualizar_clicked(ActionEvent event){
-       //Clientes tmp =  tvClientes.getSelectionModel().getSelectedItems();
-       //lbNombre.setText(tmp.getNombre());
+        Clientes tmp = tvClientes.getSelectionModel().getSelectedItem(); 
+        //Obtenemos la seleccion de la tabla (Los valores de la tabla son de la clase que almacenan
+        // en este caso Clientes), y posteriormente lo almacenamos como una clase Clientes.      
+        lbNombre.setText(tmp.getNombre());
+        lbEmpresa.setText(tmp.getEmpresa());
+        lbCorreo.setText(tmp.getCorreo());
+        lbTelefono.setText(tmp.getTelefono());
+        lbDireccion.setText(tmp.getDireccion());
+        
+        Image foto = SwingFXUtils.toFXImage(tmp.getFoto(), null);
+        imgCliente.setImage(foto);
     }
     
     @FXML
@@ -137,7 +150,7 @@ public class Eventos_C implements Initializable {
     
     @FXML
     private void btnExportar_clicked(ActionEvent event){
-        
+       
     }
     
     @FXML
