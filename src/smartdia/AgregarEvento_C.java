@@ -42,7 +42,7 @@ import org.controlsfx.control.Notifications;
  *
  * @author Danilo
  */
-public class AgregarEvento_GUI implements Initializable {
+public class AgregarEvento_C implements Initializable {
     
     @FXML public TextArea txtInformacion;
     @FXML public Button btnCancelar;

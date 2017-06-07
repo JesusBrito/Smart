@@ -35,7 +35,7 @@ import org.controlsfx.control.Notifications;
     Thread Safe
     Thread
 */
-public class Login implements Initializable {
+public class Login_C implements Initializable {
     String Usuario="";
     String Contrasenia="";
     int contadorInicio=0;
