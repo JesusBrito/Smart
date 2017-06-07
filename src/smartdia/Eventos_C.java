@@ -38,7 +38,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class Eventos implements Initializable {
+public class Eventos_C implements Initializable {
     
     @FXML private AnchorPane apEventos;
     @FXML private AnchorPane apContactos;
@@ -166,9 +166,9 @@ public class Eventos implements Initializable {
         try {
             actualizarBD();
         } catch (SQLException ex) {
-            Logger.getLogger(Eventos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Eventos_C.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
-            Logger.getLogger(Eventos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Eventos_C.class.getName()).log(Level.SEVERE, null, ex);
         }
     }    
     

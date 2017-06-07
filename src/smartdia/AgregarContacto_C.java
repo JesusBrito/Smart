@@ -30,7 +30,7 @@ import org.controlsfx.control.Notifications;
  *
  * @author Danilo
  */
-public class AgregarContacto_GUI implements Initializable {
+public class AgregarContacto_C implements Initializable {
     
     @FXML public Button btnCancelar;
     @FXML public TextField txtNombre;
