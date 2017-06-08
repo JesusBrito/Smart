@@ -13,8 +13,8 @@
     <children>
       <Pane layoutY="-2.0" prefHeight="279.0" prefWidth="616.0" style="-fx-background-color: #ffffff;">
          <children>
-            <JFXPasswordField fx:id="txtContrasenia" focusColor="#2046b9" layoutX="221.0" layoutY="87.0" promptText="Contraseña" />
-            <JFXTextField fx:id="txtUsuario" focusColor="#2046b9" layoutX="221.0" layoutY="41.0" promptText="Usuario" />
+            <JFXPasswordField fx:id="txtContrasenia" focusColor="#2046b9" labelFloat="true" layoutX="221.0" layoutY="87.0" promptText="Contraseña" />
+            <JFXTextField fx:id="txtUsuario" focusColor="#2046b9" labelFloat="true" layoutX="221.0" layoutY="41.0" promptText="Usuario" />
             <JFXButton fx:id="btnIniciar" buttonType="RAISED" layoutX="229.0" layoutY="135.0" onAction="#handleButtonAction" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Iniciar Sesion " textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />

@@ -139,15 +139,14 @@ public final class EnlaceDatos {
            File file = new File(foto);
            FileInputStream fis = new FileInputStream(file);
            PreparedStatement ps = cnx.prepareStatement(
-                   "INSERT INTO clientes(nombre, apellido, tratamiento, empresa, correo, telefono, pais, ciudad, calle, colonia, numero, contrasenia, foto)"+
-                           " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);");
+                   "INSERT INTO clientes(nombre, apellido, tratamiento, empresa, correo, telefono, pais, ciudad, calle, colonia, numero, foto)"+
+                           " VALUES(?,?,?,?,?,?,?,?,?,?,?,?);");
            
            for(int i=0; i<= 9; i++){
                ps.setString(i+1, datos[i]);
            }
            ps.setInt(11, numero);
-           ps.setString(12, datos[10]);
-           ps.setBinaryStream(13, fis, (int) file.length());   
+           ps.setBinaryStream(12, fis, (int) file.length());   
            ps.executeUpdate();
            cnx.commit();
            ps.close();
