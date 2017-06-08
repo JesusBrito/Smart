@@ -34,6 +34,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import net.sf.jasperreports.engine.JRException;
 
 public class Eventos_C implements Initializable {
     
@@ -80,12 +81,12 @@ public class Eventos_C implements Initializable {
         dpFecha.setValue(LocalDate.now());
         actualizarBD();
     }
+    
     @FXML
-    private void btnActualizarDatos_clicked(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ActualizarDatos.fxml"));
-        
+    private void btnActualizarContacto_clicked(ActionEvent event) throws SQLException, ParseException, IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ActualizarContacto.fxml"));      
         Stage stage = new Stage();
-        stage.setTitle("AActualizar Datos Personales");
+        stage.setTitle("Actualizar Datos Personales");
         Image Icono = new Image(getClass().getResourceAsStream("img/Logo.png"));
         stage.getIcons().add(Icono);
         stage.setScene(new Scene(root));
@@ -93,6 +94,11 @@ public class Eventos_C implements Initializable {
         stage.initOwner(((Node)event.getSource()).getScene().getWindow());
         stage.initStyle(StageStyle.UTILITY);
         stage.show();
+    }
+    
+    @FXML
+    private void btnActualizarDatos_clicked(ActionEvent event) throws IOException {
+    
     }
     @FXML
     private void btnContactos_clicked(ActionEvent event) throws SQLException, ParseException, IOException{
@@ -152,13 +158,13 @@ public class Eventos_C implements Initializable {
     }
     
     @FXML
-    private void btnExportarComo_clicked(ActionEvent event){
-        //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
+    private void btnExportarComo_clicked(ActionEvent event) throws JRException{
+        Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
     }
     
     @FXML
-    private void btnExportar_clicked(ActionEvent event){
-       //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
+    private void btnExportar_clicked(ActionEvent event) throws JRException{
+       Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
     }
     
     @FXML
