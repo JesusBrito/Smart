@@ -10,22 +10,22 @@ and open the template in the editor.
 
 
 .Button{
-    -fx-background-color: #727372;
+    -fx-background-color: #68b3ff;
     -fx-text-fill: #ffffff;
 }
 
 .Button:hover{
-    -fx-background-color: #8e8e8e;
+    -fx-background-color: #5287dd;
     -fx-text-fill: #000000;
 }
 
 .Button:pressed{
-    -fx-background-color: #cccccc;
+    -fx-background-color: #45a2fe;
     -fx-text-fill: #000000;
 }
 
 .AnchorPane1{
-    -fx-background-color: #727372;
+    -fx-background-color: #68b3ff;
 }
 
 .Labelw{
