@@ -14,18 +14,11 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
-/**
- *
- * @author Danilo
- */
 public class ActualizarContacto_C implements Initializable {
     
     @FXML public Button btnCancelar;
@@ -69,9 +62,7 @@ public class ActualizarContacto_C implements Initializable {
             Image imagen = new Image("file:" + selectedFile.getAbsolutePath());
             actualizarFoto(imagen);
         }
-       
     }
-    
     @FXML
     private void btnAgregarContacto_clicked(ActionEvent event) throws SQLException, IOException{
         if (txtNombre.getText().equals("") ||
@@ -92,7 +83,6 @@ public class ActualizarContacto_C implements Initializable {
             cerrar();
         }
     }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cmbTratamiento.getItems().addAll(
@@ -170,7 +160,6 @@ public class ActualizarContacto_C implements Initializable {
         alert.setTitle(titulo);
         alert.setHeaderText(encabezado);
         alert.setContentText(Contenido);
-
         alert.showAndWait();
     }
 }
