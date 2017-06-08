@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package smartdia;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
