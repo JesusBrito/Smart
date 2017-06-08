@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
@@ -10,58 +10,93 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.DatePicker?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.AgregarEvento_C">
    <children>
-      <ComboBox fx:id="cmbContactos" layoutX="43.0" layoutY="53.0" prefHeight="25.0" prefWidth="343.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="14.0" />
-      <Button fx:id="btnActualizarBD" layoutX="14.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnActualizarBD_clicked" prefHeight="25.0" prefWidth="30.0" text="↻">
-         <font>
-            <Font name="Consolas Bold Italic" size="14.0" />
-         </font></Button>
-      <Button fx:id="btnAgregarContacto" layoutX="237.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnAgregarContacto_clicked" prefHeight="25.0" prefWidth="149.0" text="Nuevo Contacto" />
-      <DatePicker fx:id="dpFechaIni" editable="false" layoutX="14.0" layoutY="159.0" prefHeight="25.0" prefWidth="205.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="181.0" />
-      <Button fx:id="btnHIHmax" layoutX="234.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIHmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+      <JFXComboBox fx:id="cmbContactos" layoutX="44.0" layoutY="54.0" prefHeight="25.0" prefWidth="343.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXButton fx:id="btnActualizarBD" layoutX="15.0" layoutY="51.0" onAction="#btnActualizarBD_clicked" prefHeight="30.0" prefWidth="27.0" text="↻">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHIHmin" layoutX="264.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIHmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAgregarContacto" layoutX="237.0" layoutY="100.0" onAction="#btnAgregarContacto_clicked" prefHeight="25.0" prefWidth="149.0" text="Nuevo Contacto">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXDatePicker fx:id="dpFechaIni" editable="false" layoutX="14.0" layoutY="159.0" prefHeight="25.0" prefWidth="205.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="181.0" />
+      <JFXButton fx:id="btnHIHmax" layoutX="234.0" layoutY="189.0" onAction="#btnHIHmax_clicked" prefHeight="30.0" prefWidth="27.0" text="⇑">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHIMmax" layoutX="310.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIMmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIHmin" layoutX="264.0" layoutY="189.0" onAction="#btnHIHmin_clicked" prefHeight="30.0" prefWidth="27.0" text="⇓">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHIMmin" layoutX="340.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnHIMmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIMmax" layoutX="310.0" layoutY="189.0" onAction="#btnHIMmax_clicked" prefHeight="30.0" prefWidth="27.0" text="⇑">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <DatePicker fx:id="dpFechaFin" editable="false" layoutX="19.0" layoutY="273.0" prefHeight="25.0" prefWidth="205.0" />
-      <Button fx:id="btnHTHmax" layoutX="235.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTHmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIMmin" layoutX="340.0" layoutY="189.0" onAction="#btnHIMmin_clicked" prefHeight="30.0" prefWidth="27.0" text="⇓">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHTHmin" layoutX="265.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTHmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpFechaFin" editable="false" layoutX="19.0" layoutY="273.0" prefHeight="25.0" prefWidth="205.0" />
+      <JFXButton fx:id="btnHTHmax" layoutX="235.0" layoutY="303.0" onAction="#btnHTHmax_clicked" prefHeight="30.0" prefWidth="27.0" text="⇑">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHTMmax" layoutX="311.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTMmax_clicked" prefHeight="25.0" prefWidth="20.0" text="⇑">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTHmin" layoutX="265.0" layoutY="303.0" onAction="#btnHTHmin_clicked" prefHeight="30.0" prefWidth="27.0" text="⇓">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <Button fx:id="btnHTMmin" layoutX="341.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnHTMmin_clicked" prefHeight="25.0" prefWidth="20.0" text="⇓">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTMmax" layoutX="311.0" layoutY="303.0" onAction="#btnHTMmax_clicked" prefHeight="30.0" prefWidth="27.0" text="⇑">
          <font>
             <Font size="14.0" />
          </font>
-      </Button>
-      <TextArea fx:id="txtInformacion" layoutX="14.0" layoutY="370.0" prefHeight="142.0" prefWidth="372.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTMmin" layoutX="341.0" layoutY="303.0" onAction="#btnHTMmin_clicked" prefHeight="30.0" prefWidth="27.0" text="⇓">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextArea fx:id="txtInformacion" layoutX="14.0" layoutY="370.0" maxWidth="372.0" minWidth="288.0" prefHeight="142.0" prefWidth="372.0" />
       <Label layoutX="19.0" layoutY="130.0" text="Fecha y Hora de inicio:">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -72,8 +107,14 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnAgregarEvent" layoutX="218.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnAgregarEvento_clicked" prefHeight="25.0" prefWidth="168.0" text="Añadir Evento" />
-      <Button fx:id="btnCancelar" cancelButton="true" layoutX="15.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnCancelar_clicked" prefHeight="25.0" prefWidth="168.0" text="Cancelar" />
+      <JFXButton fx:id="btnAgregarEvent" layoutX="218.0" layoutY="536.0" onAction="#btnAgregarEvento_clicked" prefHeight="25.0" prefWidth="168.0" text="Añadir Evento">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnCancelar" layoutX="15.0" layoutY="536.0" onAction="#btnCancelar_clicked" prefHeight="25.0" prefWidth="168.0" text="Cancelar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
       <Label fx:id="txtHoraI" layoutX="251.0" layoutY="155.0" text="00">
          <font>
             <Font name="Consolas Bold" size="24.0" />
