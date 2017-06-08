@@ -26,12 +26,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutY="289.0" mnemonicParsing="false" onAction="#btnActualizarDatos_clicked" prefHeight="54.0" prefWidth="168.0" styleClass="Button" text="Actualizar datos personales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button graphicTextGap="3.0" layoutY="343.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="168.0" styleClass="Button" text="Información" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button graphicTextGap="3.0" layoutX="1.0" layoutY="280.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="168.0" styleClass="Button" text="Información" textAlignment="CENTER" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -50,11 +45,11 @@
       </AnchorPane>
     <AnchorPane fx:id="apEventos" layoutX="191.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton layoutX="19.0" layoutY="26.0" onAction="#btnActualizar_clicked" prefHeight="25.0" prefWidth="388.0" text="Actualizar" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
+            <JFXButton layoutX="19.0" layoutY="26.0" onAction="#btnActualizar_clicked" prefHeight="25.0" prefWidth="388.0" style="-fx-background-color: #5287dd;" text="Actualizar" textFill="WHITE" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
-            <DatePicker fx:id="dpFecha" disable="true" editable="false" layoutX="417.0" layoutY="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="26.0" />
+            <DatePicker fx:id="dpFecha" disable="true" editable="false" layoutX="419.0" layoutY="27.0" prefHeight="25.0" prefWidth="176.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
             <TableView fx:id="tvCitas" editable="true" layoutX="19.0" layoutY="65.0" prefHeight="453.0" prefWidth="572.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="65.0">
               <columns>
                   <TableColumn fx:id="tcInicio" prefWidth="75.0" text="Inicio">
@@ -80,22 +75,22 @@
             </TableView>
             
             
-            <JFXButton fx:id="btnBuscar" layoutX="19.0" layoutY="571.0" onAction="#btnBuscar_clicked" prefHeight="30.0" prefWidth="94.0" text="Buscar" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
+            <JFXButton fx:id="btnBuscar" layoutX="19.0" layoutY="571.0" onAction="#btnBuscar_clicked" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #5287dd;" text="Buscar" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton layoutX="226.0" layoutY="543.0" prefHeight="30.0" prefWidth="117.0" text="Eliminar" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="266.0">
+            <JFXButton layoutX="226.0" layoutY="543.0" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #5287dd;" text="Eliminar" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="266.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>    
-            <JFXButton fx:id="btnAniadir" layoutX="351.0" layoutY="543.0" onAction="#btnAniadir_clicked" prefHeight="30.0" prefWidth="117.0" text="Añadir" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="141.0">
+            <JFXButton fx:id="btnAniadir" layoutX="351.0" layoutY="543.0" onAction="#btnAniadir_clicked" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #5287dd;" text="Añadir" textFill="#fcfcfc" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="141.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnExportarcomo" layoutX="478.0" layoutY="543.0" onAction="#btnExportarComo_clicked" prefHeight="30.0" prefWidth="117.0" text="Exportar como..." AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="14.0">
+            <JFXButton fx:id="btnExportarcomo" layoutX="478.0" layoutY="543.0" onAction="#btnExportarComo_clicked" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #5287dd;" text="Exportar como..." textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="14.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -104,7 +99,7 @@
       </AnchorPane>
       <AnchorPane fx:id="apContactos" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <DatePicker fx:id="dpFechaContacto" disable="true" editable="false" layoutX="417.0" layoutY="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="26.0" />
+            <DatePicker fx:id="dpFechaContacto" disable="true" editable="false" layoutX="420.0" layoutY="24.0" prefHeight="30.0" prefWidth="176.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="24.0" />
             <ImageView fx:id="imgCliente" fitHeight="150.0" fitWidth="185.0" layoutX="26.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/user_pic_default.png" />
@@ -155,37 +150,37 @@
                </columns>
             </TableView>
             
-            <JFXButton fx:id="btnActualizarContacto" layoutX="19.0" layoutY="24.0" mnemonicParsing="false" onAction="#actualizarBDClientes" prefHeight="30.0" prefWidth="388.0" text="Actualizar" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
+            <JFXButton fx:id="btnActualizarContacto" layoutX="19.0" layoutY="24.0" mnemonicParsing="false" onAction="#actualizarBDClientes" prefHeight="30.0" prefWidth="388.0" style="-fx-background-color: #5287dd;" text="Actualizar" textFill="WHITE" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnBuscar1" layoutX="19.0" layoutY="574.0" prefHeight="25.0" prefWidth="94.0" text="Buscar" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
+            <JFXButton fx:id="btnBuscar1" layoutX="19.0" layoutY="574.0" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #5287dd;" text="Buscar" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnEditar" layoutX="113.0" layoutY="548.0" onAction="#btnActualizarContacto_clicked" prefHeight="25.0" prefWidth="117.0" text="Editar contacto" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="100.0">
+            <JFXButton fx:id="btnEditar" layoutX="118.0" layoutY="548.0" onAction="#btnActualizarContacto_clicked" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #5287dd;" text="Editar contacto" textFill="#fffefe" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="118.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnEliminar" layoutX="226.0" layoutY="574.0" prefHeight="25.0" prefWidth="117.0" text="Eliminar" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="266.0">
+            <JFXButton fx:id="btnEliminar" layoutX="226.0" layoutY="574.0" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #5287dd;" text="Eliminar" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="266.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnAniadirContacto" layoutX="351.0" layoutY="574.0" onAction="#btnAniadirContacto_clicked" prefHeight="25.0" prefWidth="117.0" text="Añadir" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="141.0">
+            <JFXButton fx:id="btnAniadirContacto" layoutX="361.0" layoutY="548.0" onAction="#btnAniadirContacto_clicked" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #5287dd;" text="Añadir" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="131.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnExportar" layoutX="478.0" layoutY="574.0" onAction="#btnExportar_clicked" prefHeight="25.0" prefWidth="117.0" text="Exportar como..." AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="14.0">
+            <JFXButton fx:id="btnExportar" layoutX="478.0" layoutY="574.0" onAction="#btnExportar_clicked" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #5287dd;" text="Exportar como..." textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="14.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="btnVisualizar" layoutX="19.0" layoutY="252.0" onAction="#btnVisualizar_clicked" prefHeight="25.0" prefWidth="576.0" text="Visualizar Selección" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="14.0">
+            <JFXButton fx:id="btnVisualizar" layoutX="19.0" layoutY="252.0" onAction="#btnVisualizar_clicked" prefHeight="25.0" prefWidth="576.0" style="-fx-background-color: #5287dd;" text="Visualizar Selección" textFill="WHITE" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="14.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
