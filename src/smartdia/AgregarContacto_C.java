@@ -101,13 +101,13 @@ public class AgregarContacto_C implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cmbTratamiento.getItems().addAll(
+            "Ninguno",
             "Sr.",
             "Sra.",
             "Profesor",
             "Ingeniero",
             "Licenciado",
-            "Doctor",
-            "Ninguno"
+            "Doctor"
         ); 
         Image imagen = new Image(getClass().getResourceAsStream("img/user_pic_default.png"));
         actualizarFoto(imagen);
@@ -119,10 +119,16 @@ public class AgregarContacto_C implements Initializable {
     
     public void addBasedeDatos() throws FileNotFoundException, SQLException, IOException{
         EnlaceDatos bd = new EnlaceDatos("localhost", "smarthdia", "root", "toor");
+        String cmbSeleccion;
+        if(cmbTratamiento.getValue()!=null){
+            cmbSeleccion = cmbTratamiento.getValue().toString();
+        }else{
+            cmbSeleccion = "";
+        }
         String[] datos = new String[]{
             txtNombre.getText(),
             txtApellidos.getText(),
-            cmbTratamiento.getValue().toString(),
+            cmbSeleccion,
             txtEmpresa.getText(),
             txtCorreo.getText(),
             txtTelefono.getText(),
@@ -132,14 +138,22 @@ public class AgregarContacto_C implements Initializable {
             txtColonia.getText(),
         };
         int n = Integer.parseInt(txtNumero.getText());
-        if (bd.InsertarClientes(datos, selectedFile.getAbsolutePath(), n) == true){ 
+        String dir;
+        if(selectedFile!=null){
+            dir = selectedFile.getAbsolutePath();
+        }else{
+            dir = System.getProperty("user.dir") + "\\src\\smartdia\\img\\Logo.png";
+        }
+        if (bd.InsertarClientes(datos, dir, n) == true){ 
             Notificacion("Registro éxitoso", "Se ha añadido a " + txtNombre.getText() + " a la lista de contactos", 5);
             cerrar();
         } else {
             ErrorMessage("MySQL Error", "Ha ocurrido un error al ingresar un nuevo dato.", "Verifique la conexión a la base de datos.");
-        } 
+        }
+        System.out.println(dir);
         bd.cierraCnx();
     } 
+    
     public void Notificacion(String titulo, String texto, int duracion){
         Notifications notificationsBuilder = Notifications.create()
                     .title(titulo)           
