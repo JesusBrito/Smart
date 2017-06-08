@@ -154,7 +154,6 @@ public class ActualizarContacto_C implements Initializable {
         Stage stage = (Stage) btnCancelar.getScene().getWindow();
         stage.close();
     }
-    
     public void ErrorMessage(String titulo, String encabezado, String Contenido){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(titulo);
