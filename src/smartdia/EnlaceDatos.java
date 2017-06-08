@@ -146,8 +146,7 @@ public final class EnlaceDatos {
                ps.setString(i+1, datos[i]);
            }
            ps.setInt(11, numero);
-           ps.setString(12, datos[10]);
-           ps.setBinaryStream(13, fis, (int) file.length());   
+           ps.setBinaryStream(12, fis, (int) file.length());   
            ps.executeUpdate();
            cnx.commit();
            ps.close();

@@ -26,7 +26,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutY="289.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="168.0" styleClass="Button" text="Actualizar datos personales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button layoutY="289.0" mnemonicParsing="false" onAction="#btnActualizarDatos_clicked" prefHeight="54.0" prefWidth="168.0" styleClass="Button" text="Actualizar datos personales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -78,7 +78,6 @@
                   <Cursor fx:constant="CROSSHAIR" />
                </cursor>
             </TableView>
-            <JFXTreeTableView layoutX="19.0" layoutY="122.0" />
             
             
             <JFXButton fx:id="btnBuscar" layoutX="19.0" layoutY="571.0" onAction="#btnBuscar_clicked" prefHeight="30.0" prefWidth="94.0" text="Buscar" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
