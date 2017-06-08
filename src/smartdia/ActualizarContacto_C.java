@@ -101,8 +101,7 @@ public class ActualizarContacto_C implements Initializable {
             "Profesor",
             "Ingeniero",
             "Licenciado",
-            "Doctor",
-            "Ninguno"
+            "Doctor"
         ); 
         Image imagen = new Image(getClass().getResourceAsStream("img/user_pic_default.png"));
         actualizarFoto(imagen);
