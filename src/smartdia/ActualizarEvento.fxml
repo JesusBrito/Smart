@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.DatePicker?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.ActualizarCita_C">
+   <children>
+      <JFXComboBox fx:id="cmbContactos" layoutX="44.0" layoutY="54.0" prefHeight="25.0" prefWidth="343.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXButton fx:id="btnActualizarBD" layoutX="11.0" layoutY="51.0" onAction="#btnActualizarBD_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="↻" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAgregarContacto" layoutX="237.0" layoutY="100.0" onAction="#btnAgregarContacto_clicked" prefHeight="25.0" prefWidth="149.0" text="Nuevo Contacto" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXDatePicker fx:id="dpFechaIni" editable="false" layoutX="14.0" layoutY="159.0" prefHeight="25.0" prefWidth="205.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="181.0" />
+      <JFXButton fx:id="btnHIHmax" layoutX="229.0" layoutY="189.0" onAction="#btnHIHmax_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇑" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIHmin" layoutX="265.0" layoutY="189.0" onAction="#btnHIHmin_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇓" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIMmax" layoutX="310.0" layoutY="189.0" onAction="#btnHIMmax_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇑" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHIMmin" layoutX="347.0" layoutY="189.0" onAction="#btnHIMmin_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇓" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpFechaFin" editable="false" layoutX="19.0" layoutY="273.0" prefHeight="25.0" prefWidth="205.0" />
+      <JFXButton fx:id="btnHTHmax" layoutX="229.0" layoutY="303.0" onAction="#btnHTHmax_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇑" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTHmin" layoutX="264.0" layoutY="303.0" onAction="#btnHTHmin_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇓" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTMmax" layoutX="310.0" layoutY="303.0" onAction="#btnHTMmax_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇑" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHTMmin" layoutX="347.0" layoutY="303.0" onAction="#btnHTMmin_clicked" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: #5287dd;" text="⇓" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextArea fx:id="txtInformacion" layoutX="14.0" layoutY="370.0" maxWidth="372.0" minWidth="288.0" prefHeight="142.0" prefWidth="372.0" />
+      <Label layoutX="19.0" layoutY="130.0" text="Fecha y Hora de inicio:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="343.0" text="Evento:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAgregarEvent" layoutX="218.0" layoutY="536.0" onAction="#btnActualizarEvento_clicked" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #5287dd;" text="Actualizar Evento" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnCancelar" layoutX="15.0" layoutY="536.0" onAction="#btnCancelar_clicked" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: #5287dd;" text="Cancelar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label fx:id="txtHoraI" layoutX="251.0" layoutY="155.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="298.0" layoutY="150.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtMinutoI" layoutX="327.0" layoutY="155.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtMinutoT" layoutX="328.0" layoutY="269.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="264.0" text=":">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtHoraT" layoutX="252.0" layoutY="269.0" text="00">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="244.0" text="Fecha y Hora de Termino:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
