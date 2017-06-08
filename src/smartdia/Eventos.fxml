@@ -48,7 +48,7 @@
             </Label>
          </children>
       </AnchorPane>
-    <AnchorPane fx:id="apEventos" layoutX="191.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane fx:id="apEventos" layoutX="191.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <JFXButton layoutX="19.0" layoutY="26.0" onAction="#btnActualizar_clicked" prefHeight="25.0" prefWidth="388.0" text="Actualizar" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
                <cursor>
@@ -102,7 +102,7 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="apContactos" disable="true" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="apContactos" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <DatePicker fx:id="dpFechaContacto" disable="true" editable="false" layoutX="417.0" layoutY="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="26.0" />
             <ImageView fx:id="imgCliente" fitHeight="150.0" fitWidth="185.0" layoutX="26.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
@@ -161,6 +161,11 @@
                </cursor>
             </JFXButton>
             <JFXButton fx:id="btnBuscar1" layoutX="19.0" layoutY="574.0" prefHeight="25.0" prefWidth="94.0" text="Buscar" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="19.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnEditar" layoutX="113.0" layoutY="548.0" onAction="#btnActualizarContacto_clicked" prefHeight="25.0" prefWidth="117.0" text="Editar contacto" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="100.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
