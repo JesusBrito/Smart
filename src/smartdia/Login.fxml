@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
@@ -11,14 +11,23 @@
 <AnchorPane fx:id="AnchorPane" prefHeight="271.0" prefWidth="432.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.Login_C">
     
     <children>
-      <Pane layoutY="-2.0" prefHeight="279.0" prefWidth="616.0" style="-fx-background-color: #ffffff;">
+      <Pane layoutY="6.0" prefHeight="279.0" prefWidth="616.0" style="-fx-background-color: #ffffff;">
          <children>
-            <JFXPasswordField fx:id="txtContrasenia" focusColor="#2046b9" labelFloat="true" layoutX="221.0" layoutY="87.0" promptText="Contraseña" />
-            <JFXTextField fx:id="txtUsuario" focusColor="#2046b9" labelFloat="true" layoutX="221.0" layoutY="41.0" promptText="Usuario" />
-            <JFXButton fx:id="btnIniciar" buttonType="RAISED" layoutX="229.0" layoutY="135.0" onAction="#handleButtonAction" ripplerFill="WHITE" style="-fx-background-color: #2196F3;" text="Iniciar Sesion " textFill="WHITE">
+            <JFXPasswordField fx:id="txtContrasenia" focusColor="#346ac1" labelFloat="true" layoutX="221.0" layoutY="104.0" promptText="Contraseña" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXPasswordField>
+            <JFXTextField fx:id="txtUsuario" focusColor="#346ac1" labelFloat="true" layoutX="221.0" layoutY="41.0" promptText="Usuario" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="btnIniciar" buttonType="RAISED" layoutX="228.0" layoutY="153.0" onAction="#handleButtonAction" ripplerFill="WHITE" style="-fx-background-color: #346ac1;" text="Iniciar Sesion " textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
             </JFXButton>
          </children>
       </Pane>

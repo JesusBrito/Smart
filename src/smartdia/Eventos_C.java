@@ -97,8 +97,17 @@ public class Eventos_C implements Initializable {
     }
     
     @FXML
-    private void btnActualizarDatos_clicked(ActionEvent event) throws IOException {
-    
+    private void btnActualizarCita_clicked(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ActualizarEvento.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Actualizar Cita");
+        Image Icono = new Image(getClass().getResourceAsStream("img/Logo.png"));
+        stage.getIcons().add(Icono);
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(((Node)event.getSource()).getScene().getWindow());
+        stage.initStyle(StageStyle.UTILITY);
+        stage.show();
     }
     @FXML
     private void btnContactos_clicked(ActionEvent event) throws SQLException, ParseException, IOException{
