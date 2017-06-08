@@ -24,5 +24,4 @@ public class Documento {
         viewer.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         viewer.setVisible(true);
     }
-
 }

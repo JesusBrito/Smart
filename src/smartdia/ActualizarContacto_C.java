@@ -26,7 +26,7 @@ import org.controlsfx.control.Notifications;
  *
  * @author Danilo
  */
-public class ActualizarDatos_C implements Initializable {
+public class ActualizarContacto_C implements Initializable {
     
     @FXML public Button btnCancelar;
     @FXML public JFXTextField txtNombre;
