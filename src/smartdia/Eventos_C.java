@@ -34,7 +34,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import net.sf.jasperreports.engine.JRException;
+//import net.sf.jasperreports.engine.JRException;
 
 public class Eventos_C implements Initializable {
     
@@ -80,6 +80,19 @@ public class Eventos_C implements Initializable {
         
         dpFecha.setValue(LocalDate.now());
         actualizarBD();
+    }
+    @FXML
+    private void btnInformacion_clicked(ActionEvent event) throws SQLException, ParseException, IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Informacion.fxml"));      
+        Stage stage = new Stage();
+        stage.setTitle("Informacion sobre la aplicación");
+        Image Icono = new Image(getClass().getResourceAsStream("img/Logo.png"));
+        stage.getIcons().add(Icono);
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(((Node)event.getSource()).getScene().getWindow());
+        stage.initStyle(StageStyle.UTILITY);
+        stage.show(); 
     }
     
     @FXML
@@ -167,13 +180,13 @@ public class Eventos_C implements Initializable {
     }
     
     @FXML
-    private void btnExportarComo_clicked(ActionEvent event) throws JRException{
-        Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
+    private void btnExportarComo_clicked(ActionEvent event) {
+        //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
     }
     
     @FXML
-    private void btnExportar_clicked(ActionEvent event) throws JRException{
-       Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
+    private void btnExportar_clicked(ActionEvent event){
+       //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
     }
     
     @FXML

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.Informacion_C">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="189.0" layoutX="519.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Logo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="22.0" layoutY="200.0" prefHeight="177.0" prefWidth="667.0" style="-fx-background-color: #619bf9;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton fx:id="btnCerrar" layoutX="549.0" layoutY="128.0" onAction="#btnCerrar_clicked" opacity="0.71" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #000000;" text="Cerrar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="51.0" layoutY="265.0" prefHeight="17.0" prefWidth="536.0" text="que busca taner un control en su agenda y de esta manera no perder ninguna fecha importante" />
+      <Label layoutX="51.0" layoutY="238.0" prefHeight="17.0" prefWidth="582.0" text="Esta aplicacion esta diseñada para organizar contactos y eventos esta va dirigida a un grupo  empresarial " />
+      <Label layoutX="51.0" layoutY="210.0" text="Esta es una aplicación realizada para la materia de programacón orientada a objetos " />
+      <Label layoutX="55.0" layoutY="334.0" text="Version: 1.0.48" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
