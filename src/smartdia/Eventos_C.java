@@ -34,6 +34,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import net.sf.jasperreports.engine.JRException;
 
 public class Eventos_C implements Initializable {
     
@@ -152,13 +153,13 @@ public class Eventos_C implements Initializable {
     }
     
     @FXML
-    private void btnExportarComo_clicked(ActionEvent event){
-        //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
+    private void btnExportarComo_clicked(ActionEvent event) throws JRException{
+        Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Eventos.jrxml");
     }
     
     @FXML
-    private void btnExportar_clicked(ActionEvent event){
-       //Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
+    private void btnExportar_clicked(ActionEvent event) throws JRException{
+       Documento doc = new Documento(System.getProperty("user.dir") + "\\src\\smartdia\\report\\Contactos.jrxml");
     }
     
     @FXML

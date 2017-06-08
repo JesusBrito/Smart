@@ -111,7 +111,6 @@ public class AgregarContacto_C implements Initializable {
         ); 
         Image imagen = new Image(getClass().getResourceAsStream("img/user_pic_default.png"));
         actualizarFoto(imagen);
-        
     }    
     
     public void actualizarFoto(Image foto){
@@ -140,9 +139,7 @@ public class AgregarContacto_C implements Initializable {
             ErrorMessage("MySQL Error", "Ha ocurrido un error al ingresar un nuevo dato.", "Verifique la conexión a la base de datos.");
         } 
         bd.cierraCnx();
-        
-    }
-    
+    } 
     public void Notificacion(String titulo, String texto, int duracion){
         Notifications notificationsBuilder = Notifications.create()
                     .title(titulo)           
@@ -152,7 +149,7 @@ public class AgregarContacto_C implements Initializable {
                     notificationsBuilder.darkStyle();
                     notificationsBuilder.show();
     }
-    
+   
     public void cerrar(){
         Stage stage = (Stage) btnCancelar.getScene().getWindow();
         stage.close();
@@ -163,7 +160,6 @@ public class AgregarContacto_C implements Initializable {
         alert.setTitle(titulo);
         alert.setHeaderText(encabezado);
         alert.setContentText(Contenido);
-
         alert.showAndWait();
     }
 }
