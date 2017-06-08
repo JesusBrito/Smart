@@ -14,7 +14,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartdia.Eventos_C">
    <children>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="185.0" styleClass="AnchorPane1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="185.0" styleClass="AnchorPane1" stylesheets="@css/default.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="btnAgenda" layoutY="191.0" mnemonicParsing="false" onAction="#btnAgenda_clicked" prefHeight="44.0" prefWidth="168.0" styleClass="Button" text="Agenda" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <cursor>
@@ -43,7 +43,7 @@
             </Label>
          </children>
       </AnchorPane>
-    <AnchorPane fx:id="apEventos" layoutX="191.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane fx:id="apEventos" layoutX="191.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <JFXButton layoutX="19.0" layoutY="26.0" onAction="#btnActualizar_clicked" prefHeight="25.0" prefWidth="388.0" style="-fx-background-color: #5287dd;" text="Actualizar" textFill="WHITE" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.0">
                <cursor>
@@ -102,7 +102,7 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="apContactos" disable="true" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="apContactos" layoutX="201.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="609.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <DatePicker fx:id="dpFechaContacto" disable="true" editable="false" layoutX="420.0" layoutY="24.0" prefHeight="30.0" prefWidth="176.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="24.0" />
             <ImageView fx:id="imgCliente" fitHeight="150.0" fitWidth="185.0" layoutX="26.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
